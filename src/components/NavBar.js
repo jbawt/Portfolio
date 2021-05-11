@@ -19,8 +19,12 @@ import {
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import MenuIcon from '@material-ui/icons/Menu';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import PhoneIcon from '@material-ui/icons/Phone';
+import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
+import DescriptionIcon from '@material-ui/icons/Description';
+import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const drawerWidth = 240;
 
@@ -76,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     marginRight: -drawerWidth,
-    background: '#4E4187',
+    background: 'linear-gradient(#4E4187, #3083DC)',
     color: '#FFFFFF',
   },
   contentShift: {
@@ -85,6 +89,10 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.enteringScreen,
     }),
     marginRight: 0
+  },
+  accounts: {
+    position: 'relative',
+    top: '65vh',
   }
 }))
 
@@ -148,15 +156,51 @@ function NavBar() {
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "rtl" ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
+          <Typography variant="h6" noWrap>
+            Menu
+          </Typography>
         </div>
         <Divider />
         <List>
-          {['Inbox', 'starred', 'Send Mail', 'Drafts'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text}/>
+          <ListItem button>
+            <ListItemIcon>
+              <DescriptionIcon />
+            </ListItemIcon>
+            <ListItemText primary="My Projects" />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <FitnessCenterIcon />
+            </ListItemIcon>
+            <ListItemText primary="My Skills" />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <EmojiPeopleIcon />
+            </ListItemIcon>
+            <ListItemText primary="About Me" />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon> 
+              <PhoneIcon /> 
+            </ListItemIcon>
+            <ListItemText primary="Contact Me"/>
+          </ListItem>
+          <div className={classes.accounts}>
+            <Divider />
+            <ListItem button>
+              <ListItemIcon>
+                <GitHubIcon />
+              </ListItemIcon>
+              <ListItemText primary="github.com/jbawt" />
             </ListItem>
-          ))}
+            <ListItem button>
+              <ListItemIcon>
+                <LinkedInIcon />
+              </ListItemIcon>
+              <ListItemText primary="Josh Bawtinheimer" />
+            </ListItem>
+          </div>
         </List>
       </Drawer>
     </div>
