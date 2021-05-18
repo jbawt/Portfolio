@@ -14,10 +14,10 @@ const useStyles = makeStyles(() => ({
     padding: '1%',
     margin: '2%',
     border: '2.5px solid lightgray',
-    background: '#F8FFE5',
+    background: 'white',
     color: 'black',
     borderRadius: '10px',
-    boxShadow: '0 5px 3px 5px gray, 0 10px 6px 10px black'
+    // boxShadow: '0 5px 3px 5px lightgray'
   },
 }))
 

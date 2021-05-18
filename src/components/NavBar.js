@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import Intro from './Intro';
 import Header from './Header';
+import Projects from './Projects';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {
   Drawer,
@@ -49,11 +50,20 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     flexGrow: 1,
     fontWeight: 'bold',
     fontSize: '2em'
+  },
+  subTitle: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexGrow: 1,
+    fontWeight: 'bold',
+    fontSize: '3em',
+    marginTop: '2%',
   },
   hide: {
     display: 'none',
@@ -74,14 +84,11 @@ const useStyles = makeStyles((theme) => ({
   },
   content: {
     flexGrow: 1,
-    padding: theme.spacing(4),
     transition: theme.transitions.create('margin', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
     marginRight: -drawerWidth,
-    background: 'linear-gradient(#4E4187, #3083DC)',
-    color: '#FFFFFF',
   },
   contentShift: {
     transition: theme.transitions.create('margin', {
@@ -93,6 +100,11 @@ const useStyles = makeStyles((theme) => ({
   accounts: {
     position: 'relative',
     top: '65vh',
+  },
+  header: {
+    background: 'linear-gradient(#4E4187, #3083DC)',
+    color: '#FFFFFF',
+    height: '40vh',
   }
 }))
 
@@ -120,7 +132,7 @@ function NavBar() {
       >
         <Toolbar>
           <Typography variant="h6" noWrap className={classes.title}>
-            Joshua Bawtinheimer.
+            Josh Bawtinheimer.
           </Typography>
           <IconButton
             color="inherit"
@@ -139,9 +151,14 @@ function NavBar() {
         })}
       >
         <div className={classes.drawerHeader} />
-        <Header />
+        <div className={classes.header}>
+          <Header />
+          <Divider />
+          <Intro />
+        </div>
+        <h1 className={classes.subTitle}>Projects</h1>
         <Divider />
-        <Intro />
+        <Projects />
       </main>
       <Drawer
         className={classes.drawer}
