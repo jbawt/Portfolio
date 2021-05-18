@@ -7,15 +7,18 @@ import {
   CardContent,
   CardMedia,
   Button,
-  Typography
+  Typography,
+  Divider
 } from '@material-ui/core';
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 500,
+    background: 'linear-gradient(#7DDE92, #7DDE92, #7DDE92, #7DDE92, #7DDE92, #558d61)',
+    border: '1px solid black',
   },
   media: {
-    height: 200,
+    height: 250,
   },
 });
 
@@ -39,6 +42,7 @@ function WikiMaps() {
           </Typography>
         </CardContent>
       </CardActionArea>
+      <Divider />
       <CardActions>
         <Button size="small" color="primary">
           Visit

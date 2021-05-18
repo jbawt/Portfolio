@@ -63,7 +63,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     fontWeight: 'bold',
     fontSize: '3em',
-    marginTop: '2%',
+    background: 'linear-gradient(#558d61, #7DDE92)',
+    height: '10vh'
   },
   hide: {
     display: 'none',
@@ -102,9 +103,12 @@ const useStyles = makeStyles((theme) => ({
     top: '65vh',
   },
   header: {
-    background: 'linear-gradient(#4E4187, #3083DC)',
+    background: 'linear-gradient(#4E4187, #3083DC, #3083DC, #4E4187)',
     color: '#FFFFFF',
     height: '40vh',
+  },
+  underline: {
+    textDecoration: 'underline',
   }
 }))
 
@@ -132,8 +136,9 @@ function NavBar() {
       >
         <Toolbar>
           <Typography variant="h6" noWrap className={classes.title}>
-            Josh Bawtinheimer.
+            <span className={classes.underline}>Josh Bawtinheimer.</span>
           </Typography>
+          <h1>Menu</h1>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -173,9 +178,6 @@ function NavBar() {
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === "rtl" ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Menu
-          </Typography>
         </div>
         <Divider />
         <List>

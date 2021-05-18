@@ -7,7 +7,7 @@ const useStyles = makeStyles(() => ({
     margin: 0,
     textAlign: 'center',
     fontWeight: 'bold',
-    fontSize: '2.5em',
+    fontSize: '2em',
     color: 'black',
     // background: '#7DDE92'
   }
@@ -19,7 +19,7 @@ function Header() {
 
   return (
     <div className={classes.title}>
-      <h1>Welcome To Me!</h1>
+      <h1>Full-Stack Web Developer</h1>
     </div>
   )
 }
