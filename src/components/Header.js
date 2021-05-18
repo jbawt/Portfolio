@@ -4,12 +4,11 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(() => ({
   title: {
     width: '100%',
-    margin: 0,
+    padding: '1%',
     textAlign: 'center',
     fontWeight: 'bold',
     fontSize: '2em',
     color: 'black',
-    // background: '#7DDE92'
   }
 }))
 
