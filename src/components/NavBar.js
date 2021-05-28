@@ -109,7 +109,10 @@ const useStyles = makeStyles((theme) => ({
   },
   underline: {
     textDecoration: 'underline',
-  }
+  },
+  projects: {
+    marginTop: '3%',
+  },
 }))
 
 function NavBar() {
@@ -164,6 +167,7 @@ function NavBar() {
         <h1 className={classes.subTitle}>Projects</h1>
         <Divider />
         <Projects />
+        <Divider className={classes.projects} />
       </main>
       <Drawer
         className={classes.drawer}
