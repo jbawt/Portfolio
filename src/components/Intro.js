@@ -10,7 +10,7 @@ const useStyles = makeStyles(() => ({
     alignItems: 'center',
   },
   textDiv: {
-    width: '50%',
+    // width: '50%',
     padding: '1%',
     margin: '2%',
     border: '2.5px solid lightgray',
